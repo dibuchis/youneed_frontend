@@ -183,10 +183,13 @@ function clientSave(){
             
             jQuery("#usuarios-validate").val(1);
             
+            var formdata = jQuery("#client-register-form").serialize();
+
             jQuery.ajax({
                 method:"POST",
                 url:"https://app.youneed.com.ec/api/register",
-                data: jQuery("#client-register-form").serialize(),
+                data: formdata,
+                dataType: "json",
                 complete:function(data){
                     console.log(data.responseText);
                 }
