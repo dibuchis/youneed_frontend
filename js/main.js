@@ -108,7 +108,7 @@ function getServicio(srvID){
               setTimeout(function() {
                 $.ajax({
                     traditional: true,
-                    method:"get",
+                    method:"post",
                     url:app_BaseUrl + "login.php",
                     data:{
                         username: $("#api-username").val(),

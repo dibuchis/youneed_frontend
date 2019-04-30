@@ -10,10 +10,10 @@ $auth = new User();
 
 if($app->isAjaxRequest()){
 
-    if(isset($_GET['username']) && isset($_GET['password']) ){
+    if(isset($_POST['username']) && isset($_POST['password']) ){
 
-        $username = $_GET['username'];
-        $password = $_GET['password'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
             
             $auth->login($username, $password);
     }
