@@ -43,7 +43,7 @@
 						<div class="col-md-8 col-md-offset-2">
 	                    <h4>Registro Cliente: </h4>
                         <hr>
-                        <input type="hidden" id="usuarios-tipo" class="form-control" name="Usuarios[tipo]" value="Cliente">
+                        <input type="hidden" id="usuarios-tipo" class="form-control" name="tipo" value="Cliente">
                         <input type="hidden" id="usuarios-es_cliente" class="form-control" name="Usuarios[es_cliente]" value="1">
                         <input type="hidden" id="usuarios-validate" class="form-control" name="validate" value="0">
                         <div class="col-sm-6">
