@@ -20,5 +20,5 @@ if(isset($_SESSION)){
     }
 }
 
-require __DIR__ . '/views/layout/navbar_blank.php'; 
+require __DIR__ . '/views/layouts/navbar_blank.php'; 
 require __DIR__ . '/views/_registroForm.php'; 
