@@ -5,7 +5,7 @@ var app_HomeUrl = "https://youneed.com.ec";
 function getServicio(srvID){
     jQuery.ajax({
         method:"GET",
-        url: app_BaseUrl + 'app/Ajax.php',
+        url: app_BaseUrl + 'Ajax.php',
         data:{
             fn:'GetServicio',
             servicioID: srvID
@@ -63,7 +63,7 @@ function getServicio(srvID){
         
         $.ajax({
             method:"get",
-            url: app_BaseUrl + 'app/Ajax.php',
+            url: app_BaseUrl + 'Ajax.php',
             data:{
                 fn:'getUser'
             },
@@ -172,7 +172,7 @@ function logout(e){
     e.preventDefault();
     e.stopPropagation();
     jQuery.ajax({
-        url: app_BaseUrl + "app/Ajax.php",
+        url: app_BaseUrl + "Ajax.php",
         data:{
            fn:"logout"
         },
