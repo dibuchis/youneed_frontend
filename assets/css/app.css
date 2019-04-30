@@ -39,6 +39,12 @@ hr {
   .dashboard-asociado {
     background: #44bfce;
    }
+   .dashboard-cliente {
+      background: #ecb96e;
+  }
+  .dashboard-cliente .profile-menu.active {
+      background: #e09b35;
+  }
   .profile-dashboard-panel{
     padding:25px;
     background-color:#efefef;
