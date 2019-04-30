@@ -170,6 +170,7 @@ function userMenu(obj){
 }
 
 function clientSave(){
+    var valid = 0;
     ready=jQuery('#usuarios-terminos_condiciones:checked').val();
     if(ready){
         var u1 =jQuery("#usuarios-nombres").validationEngine('validate');
@@ -179,6 +180,18 @@ function clientSave(){
         var u5 =jQuery("#usuarios-clave").validationEngine('validate');
         var u6 =jQuery("#usuarios-confirma-clave").validationEngine('validate');
         if(u1&&u2&&u3&&u4&&u5&&u6){
+            
+            jQuery("#usuarios-validate").val(1);
+            
+            jQuery.ajax({
+                method:"POST",
+                url:"https://app.youneed.com.ec/api/register",
+                data: jQuery("#client-register-form").serialize(),
+                complete:function(data){
+                    console.log(data.responseText);
+                }
+            });
+
             Swal.fire({
                 type: "success",
                 title: "Bienvenido! " + jQuery("#usuarios-nombres").val(),

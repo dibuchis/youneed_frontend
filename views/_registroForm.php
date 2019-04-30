@@ -33,7 +33,7 @@
     <body>
 
     <div class="container" id="form-registro-cliente">
-        <form>
+        <form id="client-register-form">
         <div class="panel panel-primary setup-content panel-default">
 	            <div class="panel-heading">
 	                 <h3 class="panel-title">Queremos conocerte mejor</h3>
@@ -43,6 +43,9 @@
 						<div class="col-md-8 col-md-offset-2">
 	                    <h4>Registro Cliente: </h4>
                         <hr>
+                        <input type="hidden" id="usuarios-tipo" class="form-control" name="Usuarios[tipo]" value="Cliente">
+                        <input type="hidden" id="usuarios-es_cliente" class="form-control" name="Usuarios[es_cliente]" value="1">
+                        <input type="hidden" id="usuarios-validate" class="form-control" name="validate" value="0">
                         <div class="col-sm-6">
                             <div class="form-group field-usuarios-nombres required">
                                 <label class="control-label" for="usuarios-nombres">Nombres</label>
