@@ -39,9 +39,9 @@
 	                 <h3 class="panel-title">Queremos conocerte mejor</h3>
 	            </div>
 	            <div class="panel-body">
-	                
 	            	<div class="row">
 						<div class="col-md-8 col-md-offset-2">
+	                    <h2>Registro Cliente: </h2>
                         <div class="col-sm-6">
                             <div class="form-group field-usuarios-nombres required">
                                 <label class="control-label" for="usuarios-nombres">Nombres</label>
