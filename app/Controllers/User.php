@@ -179,7 +179,7 @@ function registrarCliente(){
     //    $params = trim($params, '&');
 
         echo $_POST;
-        exit;
+        exit();
 
        $ch = curl_init();
 
