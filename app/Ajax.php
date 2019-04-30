@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '../../vendor/autoload.php';
+require __DIR__ . '../vendor/autoload.php';
 
 use Youneed\App;
 use Youneed\Controllers\API;
