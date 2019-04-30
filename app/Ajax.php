@@ -1,5 +1,7 @@
 <?php
 
+echo $_SERVER['DOCUMENT_ROOT'];
+echo "<br>";
 echo (dirname(__FILE__) . '/vendor/autoload.php');
 echo "<br>";
 echo (dirname(__FILE__) . '../vendor/autoload.php');
