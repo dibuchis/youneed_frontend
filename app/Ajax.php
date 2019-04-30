@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '../../vendor/autoload.php';
+require __DIR__ . '../../../vendor/autoload.php';
 
 use Youneed\App;
 use Youneed\Controllers\API;
@@ -33,7 +33,7 @@ if(isset($_GET) || isset($_POST) ){
     *
     */
     if($fn == 'getUser'){
-        echo $user->getUser();
+        $user->getUser();
     }
 
     /*
@@ -55,7 +55,7 @@ if(isset($_GET) || isset($_POST) ){
     *
     */
     if($fn == 'logout'){
-        echo $user->logout();
+        $user->logout();
     }
 
 }
