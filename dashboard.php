@@ -1,8 +1,8 @@
-<?php require __DIR__ . '\views\layouts\header.php'; ?>
+<?php require __DIR__ . '/views/layouts/header.php'; ?>
 
 <body>
 
-<?php require __DIR__ . '\views\layouts\navbar.php'; ?>
+<?php require __DIR__ . '/views/layouts/navbar.php'; ?>
 
 <div class="container-fluid p-0 dashboard-asociado">
     <div class="row p-0">
@@ -29,6 +29,6 @@
     </div>
 </div>
 
-<?php require __DIR__ . '\views\layouts\footer.php'; ?>
+<?php require __DIR__ . '/views/layouts/footer.php'; ?>
 
 </body></html>
