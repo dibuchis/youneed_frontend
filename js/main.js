@@ -190,13 +190,13 @@ function clientSave(){
                 url:"https://app.youneed.com.ec/api/register",
                 data: {
                     'tipo': jQuery("#usuarios-tipo").val(),
-                    'Usuarios[es_cliente]': jQuery("#usuarios-es-cliente").val(),
+                    'es_cliente': jQuery("#usuarios-es-cliente").val(),
                     'validate': 1,
-                    'Usuarios[nombres]': jQuery("#usuarios-nombres").val(),
-                    'Usuarios[apellidos]': jQuery("#usuarios-apellidos").val(),
-                    'Usuarios[email]': jQuery("#usuarios-email").val(),
-                    'Usuarios[numero_celular]': jQuery("#usuarios-numero_celular").val(),
-                    'Usuarios[clave]': jQuery("#usuarios-clave").val()
+                    'nombres': jQuery("#usuarios-nombres").val(),
+                    'apellidos]': jQuery("#usuarios-apellidos").val(),
+                    'email': jQuery("#usuarios-email").val(),
+                    'numero_celular': jQuery("#usuarios-numero_celular").val(),
+                    'clave': jQuery("#usuarios-clave").val()
                 },
                 complete:function(data){
                     console.log(data.responseText);
