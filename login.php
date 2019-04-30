@@ -1,6 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
-require __DIR__ . '../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use Youneed\App;
 use Youneed\Controllers\User;
