@@ -45,7 +45,7 @@
                         <hr>
                         <input type="hidden" id="usuarios-tipo" class="form-control" name="tipo" value="Cliente">
                         <input type="hidden" id="usuarios-es-cliente" class="form-control" name="es_cliente" value="1">
-                        <input type="hidden" id="usuarios-validate" class="form-control" name="validate" value="0">
+                        <!-- <input type="hidden" id="usuarios-validate" class="form-control" name="validate" value="0"> -->
                         <div class="col-sm-6">
                             <div class="form-group field-usuarios-nombres required">
                                 <label class="control-label" for="usuarios-nombres">Nombres</label>
