@@ -199,9 +199,9 @@ function clientSave(){
                         });
                     }else{
                         var htmlText = '<ul>';
-                        for(key in obj.data.errors) { 
+                        for(key in res.data.errors) { 
                             htmlText += '<li>';
-                            htmlText += obj.data.errors[key]; 
+                            htmlText += res.data.errors[key]; 
                             htmlText += '</li>';
                         } 
                         htmlText += '<ul>';
