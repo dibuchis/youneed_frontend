@@ -3,7 +3,7 @@
 require $_SERVER['DOCUMENT_ROOT'] . '/app/vendor/autoload.php';
 
 use Youneed\App;
-use Youneed\Controllers\API;
+use Youneed\Controllers\Api;
 use Youneed\Controllers\User;
 
 if(isset($_GET) || isset($_POST) ){
@@ -11,11 +11,11 @@ if(isset($_GET) || isset($_POST) ){
     $fn = $_REQUEST["fn"];
     
     $app = new App();
-    $api = new API();
+    $api = new Api();
     $user = new User();
     
     /*
-    * Get API Servicios 
+    * Get Api Servicios 
     * 
     * @data JSON
     * return Bolean

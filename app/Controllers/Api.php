@@ -4,7 +4,7 @@ namespace Youneed\Controllers;
 
 use Youneed\App;
 
-class API{
+class Api{
 
 
 /*
