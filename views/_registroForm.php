@@ -44,12 +44,12 @@
 	                    <h4>Registro Cliente: </h4>
                         <hr>
                         <input type="hidden" id="usuarios-tipo" class="form-control" name="tipo" value="Cliente">
-                        <input type="hidden" id="usuarios-es-cliente" class="form-control" name="Usuarios[es_cliente]" value="1">
+                        <input type="hidden" id="usuarios-es-cliente" class="form-control" name="es_cliente" value="1">
                         <input type="hidden" id="usuarios-validate" class="form-control" name="validate" value="0">
                         <div class="col-sm-6">
                             <div class="form-group field-usuarios-nombres required">
                                 <label class="control-label" for="usuarios-nombres">Nombres</label>
-                                <input type="text" id="usuarios-nombres" class="form-control validate[required]" name="Usuarios[nombres]" maxlength="200" aria-required="true" aria-invalid="true">
+                                <input type="text" id="usuarios-nombres" class="form-control validate[required]" name="nombres" maxlength="200" aria-required="true" aria-invalid="true">
                                 
                                 <div class="help-block"></div>
                             </div>
@@ -57,7 +57,7 @@
 						<div class="col-sm-6">
                             <div class="form-group field-usuarios-apellidos required">
                                 <label class="control-label" for="usuarios-apellidos">Apellidos</label>
-                                <input type="text" id="usuarios-apellidos" class="form-control validate[required]" name="Usuarios[apellidos]" maxlength="200" aria-required="true">
+                                <input type="text" id="usuarios-apellidos" class="form-control validate[required]" name="apellidos" maxlength="200" aria-required="true">
 
                                 <div class="help-block"></div>
                             </div>
@@ -65,7 +65,7 @@
                         <div class="col-sm-6">
                             <div class="form-group field-usuarios-email required">
                                 <label class="control-label" for="usuarios-email">Email</label>
-                                <input type="text" id="usuarios-email" class="form-control validate[required,custom[email]]" name="Usuarios[email]" maxlength="200" aria-required="true" aria-invalid="true">
+                                <input type="text" id="usuarios-email" class="form-control validate[required,custom[email]]" name="email" maxlength="200" aria-required="true" aria-invalid="true">
 
                                 <div class="help-block"></div>
                             </div>
@@ -74,7 +74,7 @@
                             <div class="form-group field-usuarios-numero_celular required">
                                     <label class="control-label" for="usuarios-numero_celular">Número Celular</label>
                                     <div class="intl-tel-input allow-dropdown"><div class="flag-container"><div class="selected-flag" tabindex="0" title="Ecuador: +593"><div class="iti-flag ec"></div><div class="iti-arrow"></div></div><ul class="country-list hide"><li class="country active" data-dial-code="593" data-country-code="ec"><div class="flag-box"><div class="iti-flag ec"></div></div><span class="country-name">Ecuador</span><span class="dial-code">+593</span></li></ul></div>
-                                    <input type="tel" id="usuarios-numero_celular" class="form-control validate[required,minSize[10],maxSize[13],custom[number]]" name="Usuarios[numero_celular]" autocomplete="off" placeholder="+593 99 123 4567" aria-invalid="true">
+                                    <input type="tel" id="usuarios-numero_celular" class="form-control validate[required,minSize[10],maxSize[13],custom[number]]" name="numero_celular" autocomplete="off" placeholder="+593 99 123 4567" aria-invalid="true">
                                     </div>
 
                                     <div class="help-block"></div>
@@ -84,7 +84,7 @@
                         <div class="col-sm-6">
                             <div class="form-group field-usuarios-clave required">
                                 <label class="control-label" for="usuarios-clave">Clave</label>
-                                <input type="password" id="usuarios-clave" class="form-control validate[required,minSize[8],maxSize[45]]" name="Usuarios[clave]" value="" aria-required="true">
+                                <input type="password" id="usuarios-clave" class="form-control validate[required,minSize[8],maxSize[45]]" name="clave" value="" aria-required="true">
 
                                 <div class="help-block"></div>
                             </div>
