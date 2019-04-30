@@ -1,24 +1,6 @@
 <?php
 
-echo $_SERVER['DOCUMENT_ROOT'];
-echo "<br>";
-echo (dirname(__FILE__) . '/vendor/autoload.php');
-echo "<br>";
-echo (dirname(__FILE__) . '../vendor/autoload.php');
-echo "<br>";
-echo (dirname(__FILE__) . '../../vendor/autoload.php');
-echo "<br>";
-
-echo (__DIR__ . '/vendor/autoload.php');
-echo "<br>";
-echo (__DIR__ . '../vendor/autoload.php');
-echo "<br>";
-echo (__DIR__ . '../../vendor/autoload.php');
-echo "<br>";
-
-exit();
-
-require_once(dirname(__FILE__) . '../vendor/autoload.php');
+require $_SERVER['DOCUMENT_ROOT'] . '/app/vendor/autoload.php';
 
 use Youneed\App;
 use Youneed\Controllers\API;
