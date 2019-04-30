@@ -42,6 +42,7 @@
 	            	<div class="row">
 						<div class="col-md-8 col-md-offset-2">
 	                    <h4>Registro Cliente: </h4>
+                        <hr>
                         <div class="col-sm-6">
                             <div class="form-group field-usuarios-nombres required">
                                 <label class="control-label" for="usuarios-nombres">Nombres</label>
