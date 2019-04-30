@@ -1,12 +1,18 @@
 <?php
 
 echo (dirname(__FILE__) . '/vendor/autoload.php');
+echo "<br>";
 echo (dirname(__FILE__) . '../vendor/autoload.php');
+echo "<br>";
 echo (dirname(__FILE__) . '../../vendor/autoload.php');
+echo "<br>";
 
 echo (__DIR__ . '/vendor/autoload.php');
+echo "<br>";
 echo (__DIR__ . '../vendor/autoload.php');
+echo "<br>";
 echo (__DIR__ . '../../vendor/autoload.php');
+echo "<br>";
 
 exit();
 
