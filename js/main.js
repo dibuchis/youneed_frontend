@@ -1,7 +1,4 @@
-// var app_BaseUrl = "https://youneed.com.ec/app/";
-// var app_HomeUrl = "https://youneed.com.ec";
-
-var app_BaseUrl = "http://localhost/youneed_frontend/";
+var app_BaseUrl = "https://youneed.com.ec/app/";
 var app_HomeUrl = "https://youneed.com.ec";
 
 
