@@ -190,15 +190,31 @@ function clientSave(){
                 url:"https://app.youneed.com.ec/api/register",
                 data: formdata,
                 complete:function(data){
-                    console.log(data.responseText);
+                    var res = JSON.parse(data.responseText);
+                    if(res.status){
+                        Swal.fire({
+                            type: "success",
+                            title: "Bienvenido! " + jQuery("#usuarios-nombres").val(),
+                            text: "Ya estás registrado"
+                        });
+                    }else{
+                        var htmlText = '<ul>';
+                        for(key in obj.data.errors) { 
+                            htmlText += '<li>';
+                            htmlText += obj.data.errors[key]; 
+                            htmlText += '</li>';
+                        } 
+                        htmlText += '<ul>';
+
+                        Swal.fire({
+                            type: "error",
+                            title: "Lo sentimos! hubo un error.",
+                            html: htmlText
+                        });
+                    }
                 }
             });
-
-            Swal.fire({
-                type: "success",
-                title: "Bienvenido! " + jQuery("#usuarios-nombres").val(),
-                text: "Ya estás registrado"
-            });
+            
         }
     }else{
         Swal.fire({
