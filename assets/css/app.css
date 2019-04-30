@@ -923,7 +923,7 @@ h2{
 	.img-profile-container{
 		float:none !important;
 	}
-	.dashboard-asociado {
+	.dashboard-asociado, .dashboard-cliente {
 		margin-top: 27px !important;
 	}
 }
