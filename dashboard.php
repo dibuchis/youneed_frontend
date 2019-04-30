@@ -4,7 +4,15 @@
 
 <?php require __DIR__ . '/views/layouts/navbar.php'; ?>
 
-<?php var_dump($user); ?>
+<?php 
+    if($user->tipo == "asociado"){
+        require __DIR__ . '/views/_panelAsociado.php';
+    }
+    else if($user->tipo == "cliente"){
+        require __DIR__ . '/views/_panelCliente.php';
+    }
+
+?>
 
 <?php require __DIR__ . '/views/layouts/footer.php'; ?>
 
