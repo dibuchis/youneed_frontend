@@ -1,4 +1,4 @@
-<div class="container-fluid p-0 dashboard-asociado">
+<div class="container-fluid p-0 dashboard-cliente">
     <div class="row p-0">
         <div class="col-md-2 col-xs-12 p-0">
             <div class="profile-side-bar">
