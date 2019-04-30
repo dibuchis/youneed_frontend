@@ -1,5 +1,15 @@
 <?php
 
+echo (dirname(__FILE__) . '/vendor/autoload.php');
+echo (dirname(__FILE__) . '../vendor/autoload.php');
+echo (dirname(__FILE__) . '../../vendor/autoload.php');
+
+echo (__DIR__ . '/vendor/autoload.php');
+echo (__DIR__ . '../vendor/autoload.php');
+echo (__DIR__ . '../../vendor/autoload.php');
+
+exit();
+
 require_once(dirname(__FILE__) . '../vendor/autoload.php');
 
 use Youneed\App;
