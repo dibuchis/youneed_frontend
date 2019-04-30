@@ -178,6 +178,9 @@ function registrarCliente(){
         
     //    $params = trim($params, '&');
 
+        echo $_POST;
+        exit;
+
        $ch = curl_init();
 
        curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/api/register');
@@ -188,7 +191,7 @@ function registrarCliente(){
        curl_setopt($ch, CURLOPT_HEADER, 0);
        
        //We add these 2 lines to create POST request
-       curl_setopt($ch, CURLOPT_POST, count($data)); //number of parameters sent
+       curl_setopt($ch, CURLOPT_POST, count($_POST)); //number of parameters sent
        
        curl_setopt($ch, CURLOPT_POSTFIELDS, $_POST); //parameters data
     
