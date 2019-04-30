@@ -1,4 +1,4 @@
-<nav id="top-bar" class="navbar navbar-fixed-top navbar-asociado">
+<nav id="top-bar" class="navbar navbar-fixed-top navbar-blank">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w1-collapse"><span class="sr-only">Toggle navigation</span>
