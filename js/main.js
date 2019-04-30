@@ -117,9 +117,9 @@ function getServicio(srvID){
                     complete:function(data){
                         
                         
-                        var obj = JSON.parse(data.responseText);
+                        var obj = JSON.parse(JSON.parse(data.responseText));
                         
-                        console.log(obj);
+                        //console.log(obj);
                         
                         var $this = $('.login'),
                         $state = $this.find('button > .state');
