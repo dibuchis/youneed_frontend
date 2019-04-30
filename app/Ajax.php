@@ -33,7 +33,7 @@ if(isset($_GET) || isset($_POST) ){
     *
     */
     if($fn == 'getUser'){
-        $user->getUser();
+        echo $user->getUser();
     }
 
     /*
@@ -55,7 +55,7 @@ if(isset($_GET) || isset($_POST) ){
     *
     */
     if($fn == 'logout'){
-        $user->logout();
+        echo $user->logout();
     }
 
 }
