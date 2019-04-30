@@ -13,6 +13,7 @@ class App{
     /*** CONST'S ***/
     
     const APP_BASEURL = "https://youneed.com.ec/app/";
+    //const APP_BASEURL = "http://localhost/youneed_frontend/";
     const APP_HOMEURL = "https://youneed.com.ec";
     var $config = [];
 

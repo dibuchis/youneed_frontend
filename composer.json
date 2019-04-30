@@ -9,9 +9,9 @@
             "email": "info@youneed.com.ec"
         }
     ],
-    "minimum-stability": "alpha",
+    "minimum-stability": "stable",
     "require": {
-
+        "borales/yii2-phone-input": "*"
     },
     "autoload": {
         "psr-4": {

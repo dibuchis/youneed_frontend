@@ -1,4 +1,5 @@
 var app_BaseUrl = "https://youneed.com.ec/app/";
+//var app_BaseUrl = "http://localhost/youneed_frontend/";
 var app_HomeUrl = "https://youneed.com.ec";
 
 
@@ -166,6 +167,30 @@ function getServicio(srvID){
 function userMenu(obj){
     //console.log(obj);
     jQuery("#menu-item-1109").html("<a class='user-box' id='user-box'><i class='fa fa-user'></i><span class='user-name'>" + obj.usuario.nombres + "</span></a><ul role='menu' class='sub-menu'><li class='menu-item menu-item-type-post_type menu-item-object-page fusion-dropdown-submenu'><div class='user-menu'><div class='left-panel'><img class='user-imagen' src='" + obj.usuario.imagen + "'></div><div class='right-panel'><a href='https://youneed.com.ec/app/dashboard.php'>Mi Cuenta</a> <hr> <a href='logout' onclick='logout(event)'>Salir</a></div></div></li></ul>");
+}
+
+function clientSave(){
+    ready=jQuery('#usuarios-terminos_condiciones:checked').val();
+    if(ready){
+        var u1 =jQuery("#usuarios-nombres").validationEngine('validate');
+        var u2 =jQuery("#usuarios-apellidos").validationEngine('validate');
+        var u3 =jQuery("#usuarios-email").validationEngine('validate');
+        var u4 =jQuery("#usuarios-numero_celular").validationEngine('validate');
+        var u5 =jQuery("#usuarios-clave").validationEngine('validate');
+        var u6 =jQuery("#usuarios-confirma-clave").validationEngine('validate');
+        if(u1&&u2&&u3&&u4&&u5&&u6){
+            Swal.fire({
+                type: "success",
+                title: "Bienvenido! " + jQuery("#usuarios-nombres").val(),
+                text: "Ya estás registrado"
+            });
+        }
+    }else{
+        Swal.fire({
+            type: "error",
+            text: "Debes aceptar los términos y condiciones del sitio antes de continuar."
+        });
+    };
 }
 
 function logout(e){
