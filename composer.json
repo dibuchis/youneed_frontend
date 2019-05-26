@@ -1,0 +1,21 @@
+{
+    "name": "youneed/youneed_frontend",
+    "description": "Youneed FrontEnd App",
+    "type": "project",
+    "license": "propietary",
+    "authors": [
+        {
+            "name": "Youneed",
+            "email": "info@youneed.com.ec"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "borales/yii2-phone-input": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Youneed\\" : "app/"
+        }
+    }
+}
