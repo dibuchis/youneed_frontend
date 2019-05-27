@@ -11,10 +11,11 @@
     </div>
     <div class="col-md-10">
         <h5><b>Estado</b></h5>
-        <p><img class="asoc-estado" src="https://app.youneed.com.ec/images/on.png"> <?php echo $user->tipo ?> </p>
+        <p><img class="asoc-estado" src="https://app.youneed.com.ec/images/on.png"> <?php echo $estado_usuario[$user->estado]; ?> </p>
         <hr>
         <div class="row">
             <div class="col-xs-6 col-md-6">
+			<?php //var_dump($user->servicios); ?>
                 <h5><b>Nombre</b></h5>
                 <p><?php echo $user->nombres ?> <?php echo $user->apellidos ?></p>
                 <h5><b>Email</b></h5>
@@ -23,18 +24,22 @@
                 <p><?php echo $user->identificacion ?> </p>
                 <h5><b>Teléfono celular</b></h5>
                 <p><?php echo $user->numero_celular ?></p>
-                <h5><b>Teléfono celular</b></h5>
+                <h5><b>Teléfono domicilio</b></h5>
                 <p><?php echo $user->telefono_domicilio ?></p>
             </div>
             <div class="col-xs-6 col-md-6">
                 <h5><b>Fecha de registro</b></h5>
                 <p><?php echo $user->fecha_creacion ?></p>
-                <h5><b>Fecha de activacion</b></h5>
-                <p><?php echo $user->fecha_activacion ?></p>
+                <!--<h5><b>Fecha de activacion</b></h5>
+                <p><?php //echo $user->fecha_activacion ?></p>-->
                 <h5><b>Plan</b></h5>
-                <p><?php //echo $user->plan_id ?></p>
+                <p><?php echo $user->plan ?></p>
                 <h5><b>Número de cuenta</b></h5>
                 <p><?php echo $user->numero_cuenta ?></p>
+                <h5><b>País</b></h5>
+                <p><?php echo $user->pais ?></p>
+                <h5><b>Ciudad</b></h5>
+                <p><?php echo $user->ciudad ?></p>
             </div>
         </div>
         <hr>
@@ -44,10 +49,10 @@
                 <p>
                 <ul>
                 <?php 
-                    //print_r($user->servicios);
                     $servicios = $user->servicios;
-                    for($i = 0; $i < count($servicios); $i++){
-                        echo "<li>" . $servicios[$i] . "</li>";
+                    //print_r($servicios);
+                    foreach($servicios as $key => $val){
+                        echo "<li>" . $servicios[$key]->servicio_nombre . "</li>";
                     }
                 ?>
                 </ul>

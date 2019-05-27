@@ -35,6 +35,10 @@ hr {
     height:100vh;
     min-height:600px;
     position:absolute;
+<<<<<<< HEAD
+=======
+	font-family: 'Poppins', sans-serif;
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
   }
   .dashboard-asociado {
     background: #44bfce;
@@ -53,6 +57,10 @@ hr {
     transition:all 300ms ease-in-out;
     display: table;
     width: 100%;
+<<<<<<< HEAD
+=======
+	font-family: 'Poppins', sans-serif;
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
   }
   .img-profile-container{
     max-width:100px;
@@ -96,10 +104,18 @@ hr {
     display:block;
     position:relative;
     margin:-24px 0px 0px 40px;
+<<<<<<< HEAD
+=======
+	font-family: 'Poppins', sans-serif;
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
   }
   .profile-menu a{
     color:#fff;
     transition:all 200ms ease-in-out;
+<<<<<<< HEAD
+=======
+	font-family: 'Poppins', sans-serif;
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
   }
 
   hr{
@@ -143,7 +159,21 @@ hr {
     position:relative;
     width:100%;
     min-height:300px;
+<<<<<<< HEAD
   }
+=======
+	border-radius:5px;
+	font-family: 'Poppins', sans-serif;
+	}
+  
+  .dashboard-panel-wrapper .dashboard-panel-header:first-child{
+	  border-top-left-radius:5px;
+	}
+
+	.dashboard-panel-wrapper .dashboard-panel-header:last-child{
+	  border-top-right-radius:5px;
+	}
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
   .dashboard-panel-header{
     background:#178b89;
     color:white;
@@ -862,6 +892,40 @@ h2{
     background-color: #178b89;
 }
 
+<<<<<<< HEAD
+=======
+/* SPINNER */
+
+@keyframes spinner-line-fade-more {
+  0%, 100% {
+    opacity: 0; /* minimum opacity */
+  }
+  1% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-line-fade-quick {
+  0%, 39%, 100% {
+    opacity: 0.25; /* minimum opacity */
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-line-fade-default {
+  0%, 100% {
+    opacity: 0.22; /* minimum opacity */
+  }
+  1% {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE */
+
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 @media (max-width:768px) and (orientation : portrait){
   .owl-next {
     top: 0;

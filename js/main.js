@@ -2,7 +2,10 @@ var app_BaseUrl = "https://youneed.com.ec/app/";
 //var app_BaseUrl = "http://localhost/youneed_frontend/";
 var app_HomeUrl = "https://youneed.com.ec";
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 function getServicio(srvID){
     jQuery.ajax({
         method:"GET",
@@ -61,6 +64,7 @@ function getServicio(srvID){
     
     
     $( document ).ready( function(){
+<<<<<<< HEAD
         
         $.ajax({
             method:"get",
@@ -83,6 +87,48 @@ function getServicio(srvID){
            }
            
         });
+=======
+		
+		var dashboard = document.getElementById("dashboard-content");
+		
+		if(dashboard != undefined && dashboard != null){
+        
+			$("#dashboard-content").LoadingOverlay("show", {maxSize: 70 });
+			$.ajax({
+				url: "views/_dashboard.php",
+				success:function(data){
+					$("#dashboard-content").LoadingOverlay("hide");
+					$("#dashboard-content").html(data);
+				}
+			});
+		}
+		
+        var menu = document.getElementById("menu-item-1109");
+		
+		if(menu != undefined && menu != null){
+			$.ajax({
+				method:"get",
+				url: app_BaseUrl + 'app/Ajax.php',
+				data:{
+					fn:'getUser'
+				},
+
+			   complete:function(data){
+				   
+				   var res = JSON.parse(data.responseText);
+				   
+				   //console.log(data.responseText);
+				   
+				   if(res){
+					   var obj = JSON.parse(data.responseText);
+					   userMenu(obj);
+				   }
+				   
+			   }
+			   
+			});
+		}
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
         
         $('#menu-item-1109 > a').click(function(e){ 
 	        e.preventDefault();
@@ -152,9 +198,17 @@ function getServicio(srvID){
         
         $(".profile-menu-item").click(function(e){
            e.preventDefault();
+<<<<<<< HEAD
             $.ajax({
                 url:$(this).attr("href"),
                 success:function(data){
+=======
+			$("#dashboard-content").LoadingOverlay("show", {maxSize: 70 });
+            $.ajax({
+                url:$(this).attr("href"),
+                success:function(data){
+					$("#dashboard-content").LoadingOverlay("hide");
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
                     $("#dashboard-content").html(data);
 					$( document ).scrollTop("slow", 0);
                }
@@ -169,6 +223,53 @@ function userMenu(obj){
     jQuery("#menu-item-1109").html("<a class='user-box' id='user-box'><i class='fa fa-user'></i><span class='user-name'>" + obj.usuario.nombres + "</span></a><ul role='menu' class='sub-menu'><li class='menu-item menu-item-type-post_type menu-item-object-page fusion-dropdown-submenu'><div class='user-menu'><div class='left-panel'><img class='user-imagen' src='" + obj.usuario.imagen + "'></div><div class='right-panel'><a href='https://youneed.com.ec/app/dashboard.php'>Mi Cuenta</a> <hr> <a href='logout' onclick='logout(event)'>Salir</a></div></div></li></ul>");
 }
 
+<<<<<<< HEAD
+=======
+function contratarAsociado(event){
+	event.preventDefault();
+	jQuery("#panel-asociado").LoadingOverlay("show", {maxSize: 70 });
+	jQuery.ajax({
+        method:"POST",
+        // url: 'https://app.youneed.com.ec/api/contratarasociado',
+        url: app_BaseUrl + 'app/Ajax.php',
+        data:{
+            fn:'ContratarAsociado',
+            asociado_id: jQuery("#asociado_id").val(),
+            cliente_id: jQuery("#cliente_id").val(),
+            servicio_id: jQuery("#servicio_id").val()
+        },
+        complete:function(data){
+			var res = JSON.parse(data.responseText);
+            jQuery("#panel-asociado").LoadingOverlay("hide");
+			if(res.status == 1){
+				// Swal.fire({
+				// type: 'success',
+				// title: "Solicitud procesada.",
+                // text: "Tu solicitud ha sido enviada al Asociado."
+                // });
+				window.location.replace(app_BaseUrl + 'result.php');
+			}else if(res.status == 0){
+            Swal.fire({
+				type: 'error',
+				title: "Error de sericio.",
+                text: res.message
+                });
+				
+			}else if(res.status == 2){
+			jQuery("#dashboard-content").LoadingOverlay("hide");
+            Swal.fire({
+				type: 'warning',
+				title: "Solicitud Pendiente.",
+                text: res.message
+                });
+				
+			}
+			//console.log(data.responseText);
+        }
+    });
+}
+
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 function clientSave(){
     var valid = 0;
     ready=jQuery('#usuarios-terminos_condiciones:checked').val();

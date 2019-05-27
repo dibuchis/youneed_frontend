@@ -15,8 +15,14 @@
 
 <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
+<<<<<<< HEAD
 <script src="<?php echo $app::APP_BASEURL . 'js/main.js'; ?>" ></script>
 <link href="<?php echo $app::APP_BASEURL . 'assets/css/app.css'; ?>" rel="stylesheet">
+=======
+<link href="<?php echo $app::APP_BASEURL . 'assets/css/app.css'; ?>" rel="stylesheet">
+<script src="<?php echo $app::APP_BASEURL . 'js/spin.js'; ?>" ></script>
+<script src="<?php echo $app::APP_BASEURL . 'js/main.js'; ?>" ></script>
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 <!--<link href="/css/admin.css" rel="stylesheet">-->
 <!--<link href="/css/registro.css" rel="stylesheet">-->
 <!--<link href="/assets/82fa8c01/css/kv-bootstrap-notify.css" rel="stylesheet">-->

@@ -12,7 +12,11 @@
                 <li class="col-xs-12 col-md-6">
                     <input class="nav-menu-item nav-search" name="search">
                 </li>
+<<<<<<< HEAD
 				<li class="col-xs-12 hidden-md hidden-lg"><a class="hidden-md profile-menu-item" href="views/_perfil.php">Perfil</a></li>
+=======
+				<li class="col-xs-12 hidden-md hidden-lg"><a class="hidden-md profile-menu-item" href="views/_perfil<?php echo ($user->tipo == 'asociado' ? "Asociado" : "Cliente"); ?>.php">Perfil</a></li>
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
                 <li class="col-xs-12 hidden-md hidden-lg"><form action="logout" method="post">
                                 <input type="hidden" name="_csrf" value="5yMriX0FMED3BXOrHPTt5fs8e2nkPNAHd7FxaZw_TkzXRkL4JE9kCLxyMuokgaCkslgiW6ptt2Qv6UcqxVgtPw=="><a href="logout" onclick="logout(event)" class="btn btn-link logout">Salir</a></form></li>
                 <li class="hidden-xs col-md-1"><span class="nav-menu-item"><i class="material-icons">email</i> </span></li>
@@ -23,7 +27,11 @@
                         <li class="dropdown-header">Bienvenido
                             <?php echo $user->nombres; ?>
                         </li>
+<<<<<<< HEAD
                         <li><a class="profile-menu-item" href="_perfil.php"><i class="icon-user"></i> Mi Perfil</a></li>
+=======
+                        <li><a class="profile-menu-item" href="views/_perfil<?php echo ($user->tipo == 'asociado' ? "Asociado" : "Cliente"); ?>.php"><i class="icon-user"></i> Mi Perfil</a></li>
+>>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
                         <li class="divider"></li>
                         <li class="divider"></li>
                         <li>

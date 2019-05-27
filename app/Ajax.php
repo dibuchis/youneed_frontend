@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *'); 
 require $_SERVER['DOCUMENT_ROOT'] . '/app/vendor/autoload.php';
 
 use Youneed\App;
@@ -34,6 +34,17 @@ if(isset($_GET) || isset($_POST) ){
     */
     if($fn == 'getUser'){
         $user->getUser();
+    }
+	
+	/*
+    * Contratar Asociado
+    * 
+    * @data JSON
+    * return Status set
+    *
+    */
+    if($fn == 'ContratarAsociado'){
+        $api->contratarAsociado();
     }
 
     /*
