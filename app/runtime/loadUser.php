@@ -2,8 +2,13 @@
 
 require __DIR__ . '../../../vendor/autoload.php';
 use Youneed\Controllers\User;
+use Youneed\Controllers\Api;
 $auth = new User();
 $user = $auth->getSession(false);
+
+if($user){
+	$api = new Api();
+}
 
 $tipo_notificacion = [
 	1 => '',

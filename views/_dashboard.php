@@ -1,47 +1,20 @@
-<<<<<<< HEAD
-=======
 <?php require __DIR__ . '../../app/runtime/loadUser.php'; ?>
->>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 <script>
     jQuery(".profile-menu").removeClass("active");
     document.getElementById("asoc-dash").classList.add("active");
 </script>
 
-<<<<<<< HEAD
-=======
 <?php 
 
-$res = null;
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/ajax/getpedidos?uid=' . $user->id);
-
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
-curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
-curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
-curl_setopt($ch, CURLOPT_HEADER, 0);
-
-$res = curl_exec($ch);
-
-curl_close($ch);
-
-$res = json_decode($res);
+$res = $api->cargarPedidos($user->id);
 
 ?>
 
->>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 <h4>Dashboard</h4>
 
 <div class="row">
     <div class="dashboard-panel col-md-6">
         <div class="dashboard-panel-wrapper">
-<<<<<<< HEAD
-            <div class="dashboard-panel-header">Pedidos</div>
-            <div class="dashboard-panel-content">
-                <div class="dashboard-panel-content-item">
-                <i>Por el momento no tiene ningún pedido.</i>
-                </div>
-=======
             <?php if(count($res)){; ?>
 				<div class="row row m-0 p-0">
 					<div class="col-xs-2 col-md-2 dashboard-panel-header">ID</div>
@@ -70,7 +43,6 @@ $res = json_decode($res);
 						<i>Por el momento no tiene ningún pedido.</i>
 					</div>
                 <?php }; ?>
->>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
             </div>
             <div class="dashboard-panel-footer">
                 Ver todos los pedidos
