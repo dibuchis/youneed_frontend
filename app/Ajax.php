@@ -1,7 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
-//require $_SERVER['DOCUMENT_ROOT'] . '/app/vendor/autoload.php';
-require $_SERVER['DOCUMENT_ROOT'] . "/youneed_frontend/vendor/autoload.php";
+//require $_SERVER['DOCUMENT_ROOT'] . "/youneed_frontend/vendor/autoload.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/app/vendor/autoload.php";
 
 use Youneed\App;
 use Youneed\Controllers\Api;
