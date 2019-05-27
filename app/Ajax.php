@@ -1,6 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *'); 
-require $_SERVER['DOCUMENT_ROOT'] . '/app/vendor/autoload.php';
+//require $_SERVER['DOCUMENT_ROOT'] . '/app/vendor/autoload.php';
+require $_SERVER['DOCUMENT_ROOT'] . "/youneed_frontend/vendor/autoload.php";
 
 use Youneed\App;
 use Youneed\Controllers\Api;
@@ -55,7 +56,11 @@ if(isset($_GET) || isset($_POST) ){
     *
     */
     if($fn == 'login'){
-        $user->login($username, $password);
+        if(isset($_POST['username']) && isset($_POST['password'])){
+            $user->login($_POST['username'], $_POST['password']);
+        }else{
+            $user->login('', '');
+        }
     }
 
     /*

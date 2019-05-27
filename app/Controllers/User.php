@@ -86,6 +86,7 @@ function login($username, $password){
 
     $out = array(
         'login' => false,
+        'msg' => 'Error de login, campos requeridos.'
     );
 
     if(isset($username) && isset($password) ){
@@ -139,15 +140,16 @@ function login($username, $password){
            
        };
    
-       echo json_encode($dataRes);
+       echo json_encode($response);
+
+       exit();
 
 
     }else{
 
-    $response = json_encode($out);
+    echo json_encode($response);
     
-    echo $response;
-
+    exit();
 
     }
 

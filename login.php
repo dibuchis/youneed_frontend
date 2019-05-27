@@ -7,29 +7,15 @@ use Youneed\Controllers\User;
 
 $app = new App();
 $auth = new User();
-
-if($app->isAjaxRequest()){
-
-    if(isset($_POST['username']) && isset($_POST['password']) ){
-
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-            
-            $auth->login($username, $password);
-    }
-        
-
-}else{
 	
-	session_start();
-	
-	if(isset($_SESSION)){
-		if(isset($_SESSION['api_userdata']) && $_SESSION['api_token'] == $app->config->token ){
-			// var_dump($_SESSION);
-			header("Location: " . $app::APP_BASEURL . "dashboard.php");
-			exit;
-		}
+session_start();
+
+if(isset($_SESSION)){
+	if(isset($_SESSION['api_userdata']) && $_SESSION['api_token'] == $app->config->token ){
+		// var_dump($_SESSION);
+		header("Location: " . $app::APP_BASEURL . "dashboard.php");
+		exit;
 	}
-	
-	require __DIR__ . '/views/_loginForm.php'; 
 }
+
+require __DIR__ . '/views/_loginForm.php'; 

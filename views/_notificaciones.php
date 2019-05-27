@@ -5,8 +5,6 @@
     document.getElementById("asoc-notif").classList.add("active");
 </script>
 
-<<<<<<< HEAD
-=======
 <?php 
 
 $nots = null;
@@ -27,22 +25,11 @@ $nots = json_decode($res);
 
 ?>
 
->>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 <h4>Notificaciones</h4>
 <div class="row">
 
     <div class="dashboard-panel col-md-12">
         <div class="dashboard-panel-wrapper">
-<<<<<<< HEAD
-            <div class="row row m-0 p-0">
-                <div class="col-xs-2 col-md-1 dashboard-panel-header">ID</div>
-                <div class="col-xs-10 col-md-11 dashboard-panel-header">Mensaje</div>
-            </div>
-            <div class="row notif_row">
-                <div class="col-xs-2 col-md-1 notif_id">1</div>
-                <div class="col-xs-10 col-md-11 notif_msg">Te has registrado al sistema el <?php echo $user->fecha_creacion ?></div>
-            </div>
-=======
 		<?php //var_dump($nots->notificaciones[0]); ?>
             <div class="row row m-0 p-0">
                 <div class="col-xs-2 col-md-2 dashboard-panel-header">ID</div>
@@ -69,14 +56,8 @@ $nots = json_decode($res);
                 <div class="col-xs-2 col-md-2 notif_id"><?php echo $user->fecha_creacion ?></div>
                 <div class="col-xs-8 col-md-9 notif_msg">Te has registrado al sistema.</div>
 			</div>
->>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
             <div class="dashboard-panel-footer">
                 Ver más
             </div>
         </div>
-<<<<<<< HEAD
     </div>    
-</row>
-=======
-    </div>    
->>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d

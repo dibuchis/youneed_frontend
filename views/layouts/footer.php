@@ -10,29 +10,6 @@
 setTimeout(function () {$.notify({"message":"Por ahora no tiene notificaciones","icon":"glyphicon glyphicon-ok-sign","title":"Notificaciones","url":"","target":"_blank"}, notify_3844e4ee);}, 1);
 });*/</script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<<<<<<< HEAD
-<!-- <script>	
-
-    jQuery(document).ready(function(){
-        jQuery('.owl-carousel-cat').owlCarousel({
-            items: 6,
-            margin:45,
-            nav:true
-        });
-    });
-</script> -->
-
-<script type="text/javascript">
-    jQuery(function($){
-        $.ajax({
-            url: "views/_dashboard.php",
-            success:function(data){
-                $("#dashboard-content").html(data);
-            }
-        })
-    });
-
-=======
 <script>	
 
     // jQuery(document).ready(function(){
@@ -42,5 +19,4 @@ setTimeout(function () {$.notify({"message":"Por ahora no tiene notificaciones",
             // nav:true
         // });
     // });
->>>>>>> 7157867f5f9b9277b67dbce1901ba88b0c021b8d
 </script>
