@@ -98,12 +98,13 @@ hr {
     display:block;
     position:relative;
     margin:-24px 0px 0px 40px;
-	font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
   }
   .profile-menu a{
     color:#fff;
     transition:all 200ms ease-in-out;
-	font-family: 'Poppins', sans-serif;
+	  font-family: 'Poppins', sans-serif;
   }
 
   hr{

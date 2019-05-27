@@ -145,4 +145,22 @@ function contratarAsociado(){
 	}
 }
 
+function cargarNotificaciones($id){
+    $nots = null;
+    $ch = curl_init();
+    
+    curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/ajax/getnotificaciones?uid=' . $id);
+    
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
+    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    
+    $res = curl_exec($ch);
+    
+    curl_close($ch);
+    
+    return json_decode($res);
+}
+
 }
