@@ -202,8 +202,8 @@ function contratarAsociado(event){
             cliente_id: jQuery("#cliente_id").val(),
             servicio_id: jQuery("#servicio_id").val(),
             total: jQuery("#valor_total").val(),
-            fecha_para_servicio: jQuery("#metodo_de_pago").val(),
-            forma_pago: jQuery("#fecha_servicio").val()
+            fecha_para_servicio: jQuery("#fecha_servicio").val(),
+            forma_pago: jQuery("#metodo_de_pago").val()
         },
         complete:function(data){
 			var res = JSON.parse(data.responseText);
