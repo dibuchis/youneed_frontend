@@ -109,7 +109,7 @@ function contratarAsociado(){
 
     if($app->isAjaxRequest()){
 
-    if(isset($_POST['servicio_id']) && isset($_POST['asociado_id']) && isset($_POST['cliente_id']) ){
+    if(isset($_POST['Pedido'])){
 	}
 			// $query = "?servicio_id=" . $_POST['servicio_id'] . "&";
 			// $query .= "asociado_id=" . $_POST['asociado_id'] . "&";

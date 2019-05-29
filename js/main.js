@@ -198,9 +198,7 @@ function contratarAsociado(event){
         url: app_BaseUrl + 'app/Ajax.php',
         data:{
             fn:'ContratarAsociado',
-            asociado_id: jQuery("#asociado_id").val(),
-            cliente_id: jQuery("#cliente_id").val(),
-            servicio_id: jQuery("#servicio_id").val()
+            data: jQuery("#contratar-asociado").serialize()
         },
         complete:function(data){
 			var res = JSON.parse(data.responseText);
