@@ -1006,6 +1006,7 @@ h2{
   }
   #panel-pedidos .notif_row .header-movil{
     margin:0px;
+    border-radius: 5px 5px 0px 0px;
   }
   #panel-pedidos .notif_row .notif-movil{
     background:#f6f6f6;
