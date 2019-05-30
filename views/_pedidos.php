@@ -25,12 +25,12 @@ $res = $api->cargarPedidos($user->id);
 					<div class="hidden-xs hidden-sm col-md-1 dashboard-panel-header">Valor Total</div>
 					<div class="hidden-xs hidden-sm col-md-1 dashboard-panel-header">Estado</div>
 					<div class="hidden-xs hidden-sm col-md-2 dashboard-panel-header">Acciones</div>
-					<div class="col-xs-12 hidden-md dashboard-panel-header header-movil">PEDIDO <?php echo $val->id ?></div>
 				</div>
                 <div class="dashboard-panel-content-item">
 					<?php
 					foreach($res->pedidos as $key => $val){
 						echo '<div class="row notif_row">';
+							echo '<div class="col-xs-12 hidden-md dashboard-panel-header header-movil">PEDIDO' . $val->id . '</div>';
 							echo '<div class="hidden-xs hidden-sm col-md-1 notif_id">';
 							echo	$val->id;
 							echo '</div>';
