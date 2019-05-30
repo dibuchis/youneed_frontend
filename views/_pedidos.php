@@ -24,7 +24,7 @@ $res = $api->cargarPedidos($user->id);
 					<div class="col-xs-5 col-md-2 dashboard-panel-header">Fecha para servicio</div>
 					<div class="col-xs-5 col-md-1 dashboard-panel-header">Valor Total</div>
 					<div class="col-xs-5 col-md-1 dashboard-panel-header">Estado</div>
-					<div class="col-xs-5 col-md-1 dashboard-panel-header">Acciones</div>
+					<div class="col-xs-5 col-md-2 dashboard-panel-header">Acciones</div>
 				</div>
                 <div class="dashboard-panel-content-item">
 					<?php
@@ -51,17 +51,17 @@ $res = $api->cargarPedidos($user->id);
 							echo '<div class="col-xs-5 col-md-1 notif_id">';
 							echo	$estados_pedido[$val->estado];
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-1 notif_id">';
+							echo '<div class="col-xs-5 col-md-2 notif_id">';
 							if($val->estado == 0) {
-								echo '<a href="javascript:void(0)" class="btn btn-success btn-xs" onclick="aceptarPedido(' . $val->id . ')">Aceptar</a>';
-								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">Cancelar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-success btn-xs" onclick="aceptarPedido(' . $val->id . ')">ACEPTAR</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">RECHAZAR</a>';
 							}
 							if($val->estado == 1) {
-								echo '<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' . $val->id . ')">Ejecutar</a>';
-								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' . $val->id . ')">EJECUTAR</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">CANCELAR</a>';
 							}
 							if($val->estado == 2) {
-								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">CANCELAR</a>';
 							}
 							echo '</div>';
 						echo '</div>';
