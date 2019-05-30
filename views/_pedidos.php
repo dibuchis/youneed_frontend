@@ -18,7 +18,7 @@ $res = $api->cargarPedidos($user->id);
             <?php if(count($res)){; ?>
 				<div class="row row m-0 p-0">
 					<div class="col-xs-2 col-md-1 dashboard-panel-header">ID</div>
-					<div class="col-xs-5 col-md-2 dashboard-panel-header">Razón social</div>
+					<div class="col-xs-5 col-md-3 dashboard-panel-header">Razón social</div>
 					<!-- <div class="col-xs-5 col-md-2 dashboard-panel-header">Email</div> -->
 					<div class="col-xs-2 col-md-2 dashboard-panel-header">Fecha de creación</div>
 					<div class="col-xs-5 col-md-2 dashboard-panel-header">Fecha para servicio</div>
@@ -33,7 +33,7 @@ $res = $api->cargarPedidos($user->id);
 							echo '<div class="col-xs-2 col-md-1 notif_id">';
 							echo	$val->id;
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-2 notif_id">';
+							echo '<div class="col-xs-5 col-md-3 notif_id">';
 							echo	$val->razon_social;
 							echo '</div>';
 							// echo '<div class="col-xs-5 col-md-2 notif_id">';
