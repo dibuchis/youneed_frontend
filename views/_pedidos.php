@@ -51,7 +51,7 @@ $res = $api->cargarPedidos($user->id);
 							echo	$val->fecha_para_servicio;
 							echo '</div>';
 							echo '<div class="col-xs-6 hidden-md notif-movil">VALOR</div>';
-							echo '<div class="col-xs-6 hidden-md notif_acciones notif-movil">ESTADO</div>';
+							echo '<div class="col-xs-6 hidden-md notif-movil">ESTADO</div>';
 							echo '<div class="col-xs-12 hidden-md"></div>';
 							echo '<div class="col-xs-6 col-md-1 notif_valor">';
 							echo	$val->total;
