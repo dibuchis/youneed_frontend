@@ -197,6 +197,31 @@ hr {
   .link-servicio{
       cursor:pointer;
   }
+
+  /** PEDIDO **/
+
+  #panel-pedidos .notif_estado{
+    font-size:0.8em;
+  }
+  #panel-pedidos .notif_row{
+    border-bottom:1px solid #eee;
+  }
+  #panel-pedidos .notif_row > div{
+    margin-bottom:4px;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+  }
+  #panel-pedidos .notif_acciones {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+  
+  }
+  #panel-pedidos .notif_acciones .btn {
+    margin-right:4px;
+  }
   
   
   /** ADMIN **/

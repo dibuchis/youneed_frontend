@@ -13,7 +13,7 @@ $res = $api->cargarPedidos($user->id);
 <h4>Dashboard</h4>
 
 <div class="row">
-    <div class="dashboard-panel col-md-12">
+    <div class="dashboard-panel col-md-12" id="panel-pedidos">
         <div class="dashboard-panel-wrapper">
             <?php if(count($res)){; ?>
 				<div class="row row m-0 p-0">
