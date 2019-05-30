@@ -59,7 +59,7 @@ $nots = $api->cargarNotificaciones($user->id);
                 <?php if(count($nots)){; ?>
                     <div class="row row m-0 p-0">
                         <div class="col-xs-2 col-md-1 dashboard-panel-header">ID</div>
-                        <div class="col-xs-6 col-md-11 dashboard-panel-header">Mensaje</div>
+                        <div class="col-xs-10 col-md-11 dashboard-panel-header">Mensaje</div>
                     </div>
                 <div class="dashboard-panel-content-item">
                         <?php
@@ -68,7 +68,7 @@ $nots = $api->cargarNotificaciones($user->id);
                                     echo '<div class="col-xs-2 col-md-1 notif_id">';
                                     echo	$val->id;
                                     echo '</div>';
-                                    echo '<div class="col-xs-6 col-md-11 notif_id">';
+                                    echo '<div class="col-xs-10 col-md-11 notif_id">';
                                     echo	$tipo_notificacion[$val->tipo_notificacion_id];
                                     echo '</div>';
                                 echo '</div>';

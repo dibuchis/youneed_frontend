@@ -17,41 +17,48 @@ $res = $api->cargarPedidos($user->id);
         <div class="dashboard-panel-wrapper">
             <?php if(count($res)){; ?>
 				<div class="row row m-0 p-0">
-					<div class="col-xs-2 col-md-1 dashboard-panel-header">ID</div>
-					<div class="col-xs-5 col-md-3 dashboard-panel-header">Razón social</div>
-					<!-- <div class="col-xs-5 col-md-2 dashboard-panel-header">Email</div> -->
-					<div class="col-xs-2 col-md-2 dashboard-panel-header">Fecha de solicitud</div>
-					<div class="col-xs-5 col-md-2 dashboard-panel-header">Fecha para servicio</div>
-					<div class="col-xs-5 col-md-1 dashboard-panel-header">Valor Total</div>
-					<div class="col-xs-5 col-md-1 dashboard-panel-header">Estado</div>
-					<div class="col-xs-5 col-md-2 dashboard-panel-header">Acciones</div>
+					<div class="col-xs-hidden col-md-1 dashboard-panel-header">ID</div>
+					<div class="col-xs-hidden col-md-3 dashboard-panel-header">Razón social</div>
+					<!-- <div class="col-xs-hidden col-md-2 dashboard-panel-header">Email</div> -->
+					<div class="col-xs-hidden col-md-2 dashboard-panel-header">Fecha de solicitud</div>
+					<div class="col-xs-hidden col-md-2 dashboard-panel-header">Fecha para servicio</div>
+					<div class="col-xs-hidden col-md-1 dashboard-panel-header">Valor Total</div>
+					<div class="col-xs-hidden col-md-1 dashboard-panel-header">Estado</div>
+					<div class="col-xs-hidden col-md-2 dashboard-panel-header">Acciones</div>
+					<div class="col-xs-12 col-md-hidden dashboard-panel-header header-movil">PEDIDO <?php echo $val->id ?></div>
 				</div>
                 <div class="dashboard-panel-content-item">
 					<?php
 					foreach($res->pedidos as $key => $val){
 						echo '<div class="row notif_row">';
-							echo '<div class="col-xs-2 col-md-1 notif_id">';
+							echo '<div class="col-xs-hidden col-md-1 notif_id">';
 							echo	$val->id;
 							echo '</div>';
+							echo '<div class="col-xs-12 col-md-hidden notif_acciones notif-movil">RAZÓN SOCIAL</div>';
 							echo '<div class="col-xs-5 col-md-3 notif_nombre">';
 							echo	$val->razon_social;
 							echo '</div>';
 							// echo '<div class="col-xs-5 col-md-2 notif_id">';
 							// echo	$val->email;
 							// echo '</div>';
+							echo '<div class="col-xs-6 col-md-hidden notif_acciones notif-movil">FECHA SOLICITUD</div>';
 							echo '<div class="col-xs-5 col-md-2 notif_fecha">';
 							echo	$val->fecha_creacion;
 							echo '</div>';
+							echo '<div class="col-xs-6 col-md-hidden notif_acciones notif-movil">FECHA SERVICIO</div>';
 							echo '<div class="col-xs-5 col-md-2 notif_fecha">';
 							echo	$val->fecha_para_servicio;
 							echo '</div>';
+							echo '<div class="col-xs-6 col-md-hidden notif_acciones notif-movil">VALOR</div>';
 							echo '<div class="col-xs-5 col-md-1 notif_valor">';
 							echo	$val->total;
 							echo '</div>';
+							echo '<div class="col-xs-6 col-md-hidden notif_acciones notif-movil">ESTADO</div>';
 							echo '<div class="col-xs-5 col-md-1 notif_estado">';
 							echo	$estados_pedido[$val->estado];
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-2 notif_acciones">';
+							echo '<div class="col-xs-12 col-md-hidden notif_acciones notif-movil">acciones</div>';
+							echo '<div class="col-xs-12 col-md-2 notif_acciones">';
 							if($val->estado == 0) {
 								echo '<a href="javascript:void(0)" class="btn btn-success btn-xs" onclick="aceptarPedido(' . $val->id . ')">ACEPTAR</a>';
 								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">RECHAZAR</a>';
