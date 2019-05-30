@@ -53,15 +53,15 @@ $res = $api->cargarPedidos($user->id);
 							echo '</div>';
 							echo '<div class="col-xs-5 col-md-1 notif_id">';
 							if($val->estado == 0) {
-								echo '<a href="javascript:void(0)" class="btn btn-success btn-small" onclick="aceptarPedido(' . $val->id . ')">Aceptar</a>';
-								echo '<a href="javascript:void(0)" class="btn btn-danger btn-small" onclick="cancelarPedido(' . $val->id . ')">Cancelar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-success btn-xs" onclick="aceptarPedido(' . $val->id . ')">Aceptar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">Cancelar</a>';
 							}
 							if($val->estado == 1) {
-								echo '<a href="javascript:void(0)" class="btn btn-warning btn-small" onclick="ejecutarPedido(' . $val->id . ')">Ejecutar</a>';
-								echo '<a href="javascript:void(0)" class="btn btn-danger btn-small" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' . $val->id . ')">Ejecutar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
 							}
 							if($val->estado == 2) {
-								echo '<a href="javascript:void(0)" class="btn btn-danger btn-small" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
 							}
 							echo '</div>';
 						echo '</div>';
