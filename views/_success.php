@@ -86,7 +86,7 @@
                         
 							<center>
 
-                            <p><img width="250px" class="img-responsive center-block" src="https://youneed.com.ec/app/assets/img/success.jpg"></p>
+                            <p><img width="200px" class="img-responsive center-block" src="https://youneed.com.ec/app/assets/img/success.jpg"></p>
 
                             <p>Tu solicitud de servicio a sido enviada exitosamente!</p>
 
