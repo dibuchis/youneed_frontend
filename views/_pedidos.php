@@ -24,6 +24,7 @@ $res = $api->cargarPedidos($user->id);
 					<div class="col-xs-5 col-md-2 dashboard-panel-header">Fecha para servicio</div>
 					<div class="col-xs-5 col-md-2 dashboard-panel-header">Valor Total</div>
 					<div class="col-xs-5 col-md-1 dashboard-panel-header">Estado</div>
+					<div class="col-xs-5 col-md-1 dashboard-panel-header">Acciones</div>
 				</div>
                 <div class="dashboard-panel-content-item">
 					<?php
@@ -44,11 +45,24 @@ $res = $api->cargarPedidos($user->id);
 							echo '<div class="col-xs-5 col-md-2 notif_id">';
 							echo	$val->fecha_para_servicio;
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-2 notif_id">';
+							echo '<div class="col-xs-5 col-md-1 notif_id">';
 							echo	$val->total;
 							echo '</div>';
 							echo '<div class="col-xs-5 col-md-1 notif_id">';
-							echo	$val->estado;
+							echo	$estados_pedido[$val->estado];
+							echo '</div>';
+							echo '<div class="col-xs-5 col-md-1 notif_id">';
+							if($val->estado == 0) {
+								echo '<a href="javascript:void(0)" class="btn btn-success btn-small" onclick="aceptarPedido(' . $val->id . ')">Aceptar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-small" onclick="cancelarPedido(' . $val->id . ')">Cancelar</a>';
+							}
+							if($val->estado == 1) {
+								echo '<a href="javascript:void(0)" class="btn btn-warning btn-small" onclick="ejecutarPedido(' . $val->id . ')">Ejecutar</a>';
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-small" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
+							}
+							if($val->estado == 2) {
+								echo '<a href="javascript:void(0)" class="btn btn-danger btn-small" onclick="cancelarPedido(' . $val->id . ')">Rechazar</a>';
+							}
 							echo '</div>';
 						echo '</div>';
 					}

@@ -29,3 +29,11 @@ $estado_usuario = [
 	1 => 'Activo',
 	2 => 'Inactivo',
 ];
+
+$estados_pedido = [
+	0 => 'En espera',
+	1 => 'Reservada',
+	2 => 'En ejecución',
+	3 => 'Pagada',
+	4 => 'Cancelada',
+];
