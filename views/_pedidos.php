@@ -20,7 +20,7 @@ $res = $api->cargarPedidos($user->id);
 					<div class="col-xs-2 col-md-1 dashboard-panel-header">ID</div>
 					<div class="col-xs-5 col-md-3 dashboard-panel-header">Razón social</div>
 					<!-- <div class="col-xs-5 col-md-2 dashboard-panel-header">Email</div> -->
-					<div class="col-xs-2 col-md-2 dashboard-panel-header">Fecha de creación</div>
+					<div class="col-xs-2 col-md-2 dashboard-panel-header">Fecha de solicitud</div>
 					<div class="col-xs-5 col-md-2 dashboard-panel-header">Fecha para servicio</div>
 					<div class="col-xs-5 col-md-1 dashboard-panel-header">Valor Total</div>
 					<div class="col-xs-5 col-md-1 dashboard-panel-header">Estado</div>
@@ -33,25 +33,25 @@ $res = $api->cargarPedidos($user->id);
 							echo '<div class="col-xs-2 col-md-1 notif_id">';
 							echo	$val->id;
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-3 notif_id">';
+							echo '<div class="col-xs-5 col-md-3 notif_nombre">';
 							echo	$val->razon_social;
 							echo '</div>';
 							// echo '<div class="col-xs-5 col-md-2 notif_id">';
 							// echo	$val->email;
 							// echo '</div>';
-							echo '<div class="col-xs-5 col-md-2 notif_id">';
+							echo '<div class="col-xs-5 col-md-2 notif_fecha">';
 							echo	$val->fecha_creacion;
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-2 notif_id">';
+							echo '<div class="col-xs-5 col-md-2 notif_fecha">';
 							echo	$val->fecha_para_servicio;
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-1 notif_id">';
+							echo '<div class="col-xs-5 col-md-1 notif_valor">';
 							echo	$val->total;
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-1 notif_id">';
+							echo '<div class="col-xs-5 col-md-1 notif_estado">';
 							echo	$estados_pedido[$val->estado];
 							echo '</div>';
-							echo '<div class="col-xs-5 col-md-2 notif_id">';
+							echo '<div class="col-xs-5 col-md-2 notif_acciones">';
 							if($val->estado == 0) {
 								echo '<a href="javascript:void(0)" class="btn btn-success btn-xs" onclick="aceptarPedido(' . $val->id . ')">ACEPTAR</a>';
 								echo '<a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' . $val->id . ')">RECHAZAR</a>';
