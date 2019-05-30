@@ -988,7 +988,47 @@ h2{
 	}
 	.dashboard-asociado {
 		padding-top: 20px !important;
-	}
+  }
+  #panel-pedidos .notif_row{
+    border:1px solid #ddd;
+    border-radius:5px;
+    margin-bottom:15px !important;
+    position:relative;
+    display:table;
+    text-align:center;
+  }
+  #panel-pedidos .notif_row{
+    border:1px solid #ddd;
+    border-radius:5px;
+    margin-bottom:15px !important;
+    position:relative;
+    display:table;
+  }
+  #panel-pedidos .notif_row .header-movil{
+    margin:0px;
+  }
+  #panel-pedidos .notif_row .notif-movil{
+    background:#f6f6f6;
+    text-align:center;
+    overflow:hidden;
+    height:25px;
+    padding:4px;
+    font-size:0.85em;
+    font-weight:bold;
+  }
+  #panel-pedidos .notif_row .notif_acciones{
+    padding:15px 2px;
+  }
+  #panel-pedidos .btn-xs {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
 }
 @media (min-width:768px){
 	.img-profile-container{
