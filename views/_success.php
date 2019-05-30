@@ -76,17 +76,19 @@
 
 	            	<div class="row">
 
-						<div class="col-md-8 col-md-offset-2">
+						<div class="col-md-12">
 
 	                    <center><h3>Felicitaciones! </h3></center>
 
                         <hr>
 
-                        
-
                         <div class="col-md-12">
+                        
+							<center>
 
-							<center><p>Tu solicitud de servicio a sido enviada exitosamente!</p>
+                            <p><img width="250px" class="img-responsive center-block" src="https://youneed.com.ec/app/assets/img/success.jpg"></p>
+
+                            <p>Tu solicitud de servicio a sido enviada exitosamente!</p>
 
                             <p>Revisa tu correo electrónico</p>
 
