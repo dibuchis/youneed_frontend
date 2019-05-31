@@ -186,7 +186,8 @@ function getServicio(srvID){
 
 function userMenu(obj){
     //console.log(obj);
-    jQuery("#menu-item-1109").html("<a class='user-box' id='user-box'><i class='fa fa-user'></i><span class='user-name'>" + obj.usuario.nombres + "</span> </a><a href='https://youneed.com.ec/contratar'><span><i class='fas fa-shopping-cart'></i></a></span><ul role='menu' class='sub-menu'><li class='menu-item menu-item-type-post_type menu-item-object-page fusion-dropdown-submenu'><div class='user-menu'><div class='left-panel'><img class='user-imagen' src='" + obj.usuario.imagen + "'></div><div class='right-panel'><a href='https://youneed.com.ec/app/dashboard.php'>Mi Cuenta</a> <hr> <a href='logout' onclick='logout(event)'>Salir</a></div></div></li></ul>");
+    jQuery("#menu-item-1109").html("<a class='user-box' id='user-box'><i class='fa fa-user'></i><span class='user-name'>" + obj.usuario.nombres + "</span> </a><ul role='menu' class='sub-menu'><li class='menu-item menu-item-type-post_type menu-item-object-page fusion-dropdown-submenu'><div class='user-menu'><div class='left-panel'><img class='user-imagen' src='" + obj.usuario.imagen + "'></div><div class='right-panel'><a href='https://youneed.com.ec/app/dashboard.php'>Mi Cuenta</a> <hr> <a href='logout' onclick='logout(event)'>Salir</a></div></div></li></ul>");
+    jQuery("#menu-menu-principal").append('<li id="shopping-cart-menu" class="menu-item menu-item-type-custom menu-item-object-custom fusion-menu-item-button fusion-last-menu-item" ><a href="https://youneed.com.ec/contratar"><i class="fas fa-shopping-cart"></i></a></li>');
 }
 
 function contratarAsociado(event){
