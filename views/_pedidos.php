@@ -29,7 +29,7 @@ $res = $api->cargarPedidos($user->id);
                 <div class="dashboard-panel-content-item">
 					<?php
 					foreach($res->pedidos as $key => $val){
-						echo '<div class="row notif_row">';
+						echo '<div class="row notif_row" id="pedido-' . $val->id . '">';
 							echo '<div class="col-xs-12 hidden-md hidden-lg dashboard-panel-header header-movil">PEDIDO' . $val->id . '</div>';
 							echo '<div class="hidden-xs hidden-sm col-md-1 notif_id">';
 							echo	$val->id;
