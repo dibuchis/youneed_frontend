@@ -283,7 +283,7 @@ function cancelarPedido(pid){
 			// if(data){
                 Swal.fire({
                     type:"success",
-                    text:"Has aceptado la solicitud."
+                    text:"Has cancelado la solicitud."
                 });
 			// }
 			//console.log(data.responseText);
