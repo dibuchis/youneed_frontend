@@ -14,6 +14,7 @@ $nots = $api->cargarNotificaciones($user->id);
 <h4>Dashboard</h4>
 
 <div class="row">
+    <?php if($user->tipo == "asociado"){ ?>
     <div class="dashboard-panel col-md-6">
         <div class="header"><center>Pedidos</center></div>
         <div class="dashboard-panel-wrapper">
@@ -51,6 +52,7 @@ $nots = $api->cargarNotificaciones($user->id);
             </div>
         </div>
     </div>
+    <?php } ?>
 
     <div class="dashboard-panel col-md-6">
         <div class="header"><center>Notificaciones</center></div>
