@@ -238,6 +238,62 @@ function contratarAsociado(event){
     });
 }
 
+function confirmarPedido(pid){
+	jQuery.ajax({
+        method:"POST",
+        // url: 'https://app.youneed.com.ec/api/contratarasociado',
+        url: app_BaseUrl + 'app/Ajax.php',
+        data:{
+            fn:'confirmarPedido',
+            id: pid
+        },
+        beforeSend:function(){
+            jQuery("#pedido-" + pid).LoadingOverlay("show", {maxSize: 30 });
+        },
+        success:function(data){
+			
+			// if(data){
+                Swal.fire({
+                    type:"success",
+                    text:"Has aceptado la solicitud."
+                });
+			// }
+			//console.log(data.responseText);
+        },
+        afterSend:function(){
+            jQuery("#pedido-" + pid).LoadingOverlay("hide");
+        },
+    });
+}
+
+function cancelarPedido(pid){
+	jQuery.ajax({
+        method:"POST",
+        // url: 'https://app.youneed.com.ec/api/contratarasociado',
+        url: app_BaseUrl + 'app/Ajax.php',
+        data:{
+            fn:'cancelarPedido',
+            id: pid
+        },
+        beforeSend:function(){
+            jQuery("#pedido-" + pid).LoadingOverlay("show", {maxSize: 30 });
+        },
+        success:function(data){
+			
+			// if(data){
+                Swal.fire({
+                    type:"success",
+                    text:"Has aceptado la solicitud."
+                });
+			// }
+			//console.log(data.responseText);
+        },
+        afterSend:function(){
+            jQuery("#pedido-" + pid).LoadingOverlay("hide");
+        },
+    });
+}
+
 function clientSave(){
     var valid = 0;
     ready=jQuery('#usuarios-terminos_condiciones:checked').val();

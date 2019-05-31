@@ -74,4 +74,27 @@ if(isset($_GET) || isset($_POST) ){
         $user->logout();
     }
 
+    /*
+    * Api Aceptar Pedido
+    * 
+    * @data JSON
+    * return User
+    *
+    */
+    if($fn == 'confirmarPedido'){
+        $api->confirmarPedido();
+    }
+
+
+    /*
+    * Api Cancelar Pedido
+    * 
+    * @data JSON
+    * return User
+    *
+    */
+    if($fn == 'cancelarPedido'){
+        $api->cancelarPedido();
+    }
+
 }
