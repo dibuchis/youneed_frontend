@@ -8,6 +8,8 @@
 
 $res = $api->cargarPedidos($user->id);
 
+var_dump($res);
+
 ?>
 
 <h4>Dashboard</h4>
