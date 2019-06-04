@@ -84,7 +84,7 @@ function cargarPedidos($id){
     $res = null;
     $ch = curl_init();
     
-    curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/ajax/getpedidos?uid=' . $id);
+    curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/api/getpedidos?uid=' . $id);
     
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
@@ -189,7 +189,7 @@ function cargarNotificaciones($id){
     $nots = null;
     $ch = curl_init();
     
-    curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/ajax/getnotificaciones?uid=' . $id);
+    curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/api/getnotificaciones?uid=' . $id);
     
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
