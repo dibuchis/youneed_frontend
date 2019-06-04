@@ -95,7 +95,7 @@ function cargarPedidos($id){
     
     curl_close($ch);
     
-    return json_encode($res);
+    return json_decode($res);
 }
 
 function confirmarPedido($id){
