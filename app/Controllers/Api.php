@@ -98,7 +98,7 @@ function cargarPedidos($id){
     
     curl_close($ch);
     
-    return json_decode(json_decode($res));
+    return json_decode($res);
 }
 
 function confirmarPedido($id){
@@ -203,7 +203,7 @@ function cargarNotificaciones($id){
     
     curl_close($ch);
     
-    return json_decode(json_decode($res));
+    return json_decode($res);
 }
 
 }
