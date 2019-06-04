@@ -8,7 +8,7 @@
 
 $res = $api->cargarPedidos($user->id);
 
-var_dump($res);
+var_dump(json_decode($res));
 
 ?>
 
