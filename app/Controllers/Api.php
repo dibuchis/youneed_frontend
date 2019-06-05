@@ -80,27 +80,6 @@ function getServicio(){
 
 }
 
-function cargarPedidos($id){
-    $res = null;
-    $ch = curl_init();
-    
-    curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/api/getpedidos?uid=' . $id);
-    
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
-    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
-    curl_setopt($ch, CURLOPT_HEADER, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'Accept: application/json'
-    ));
-    
-    $res = curl_exec($ch);
-    
-    curl_close($ch);
-    
-    return json_decode($res);
-}
-
 function confirmarPedido($id){
     // $res = null;
     // $ch = curl_init();
@@ -150,10 +129,8 @@ function contratarAsociado(){
         );
 		
 
-    if($app->isAjaxRequest()){
+    if($app->isAjaxRequest() && isset($_POST)){
 
-    if(isset($_POST)){
-	}
 			// $query = "?servicio_id=" . $_POST['servicio_id'] . "&";
 			// $query .= "asociado_id=" . $_POST['asociado_id'] . "&";
 			// $query .= "cliente_id=" . $_POST['cliente_id'];
@@ -189,21 +166,91 @@ function contratarAsociado(){
 }
 
 function cargarNotificaciones($id){
-    $nots = null;
-    $ch = curl_init();
     
-    curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/api/getnotificaciones?uid=' . $id);
+    $response = array(
+        'status' => 0,
+    );
+
+    if($id){
+
+        $data = array (
+            'uid' => $id
+        );
+        
+        $params = '';
+            foreach($data as $key=>$value)
+            $params .= $key.'='.$value.'&';
+        
+        $params = trim($params, '&');
+
+        $nots = null;
+        $ch = curl_init();
     
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
-    curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
-    curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/api/getnotificaciones');
+        
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
+        curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+                
+        //We add these 2 lines to create POST request
+        curl_setopt($ch, CURLOPT_POST, count($data)); //number of parameters sent
+        
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $params); //parameters data
+        
+        $response = curl_exec($ch);
+        
+        curl_close($ch);
+        
+        return json_decode($response);
+
+    }else{
+        echo json_encode($response);
+    }
+}
+
+function cargarPedidos($id){
+
+    $response = array(
+        'status' => 0,
+    );
+
+    if($id){
+
+        $data = array (
+            'uid' => $id
+        );
+        
+        $params = '';
+            foreach($data as $key=>$value)
+            $params .= $key.'='.$value.'&';
+        
+        $params = trim($params, '&');
+
+        $nots = null;
+        $ch = curl_init();
     
-    $res = curl_exec($ch);
-    
-    curl_close($ch);
-    
-    return json_decode($res);
+        curl_setopt($ch, CURLOPT_URL, 'https://app.youneed.com.ec/api/getpedidos');
+        
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); //Return data instead printing directly in Browser
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10); //Timeout after 7 seconds
+        curl_setopt($ch, CURLOPT_USERAGENT, "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1)");
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+                
+        //We add these 2 lines to create POST request
+        curl_setopt($ch, CURLOPT_POST, count($data)); //number of parameters sent
+        
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $params); //parameters data
+        
+        $response = curl_exec($ch);
+        
+        curl_close($ch);
+        
+        return json_decode($response);
+
+    }else{
+        echo json_encode($response);
+    }
 }
 
 }
