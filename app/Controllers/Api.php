@@ -116,11 +116,9 @@ function aceptarPedido($id){
         curl_close($ch);
         
         echo json_decode($response);
-        exit();
 
     }else{
         echo json_encode($response);
-        exit();
     }
 }
 
@@ -159,11 +157,10 @@ function cancelarPedido($id){
         
         curl_close($ch);
         
-        echo json_decode($response);
-        exit();
+        return json_decode($response);
+
     }else{
         echo json_encode($response);
-        exit();
     }
 }
 
@@ -207,10 +204,8 @@ function contratarAsociado(){
             $response = json_encode($dataRes);
         
             echo $dataRes;
-            exit();
 	}else{
-        echo json_encode($response);
-        exit();
+		echo json_encode($response);
 	}
 }
 
@@ -255,7 +250,6 @@ function cargarNotificaciones($id){
 
     }else{
         echo json_encode($response);
-        exit();
     }
 }
 
@@ -300,7 +294,6 @@ function cargarPedidos($id){
 
     }else{
         echo json_encode($response);
-        exit();
     }
 }
 
