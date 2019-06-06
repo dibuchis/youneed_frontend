@@ -9,9 +9,6 @@
         </div>
         <div id="w1-collapse" class="collapse navbar-collapse">
             <ul id="w2" class="nav-pills navbar-right nav">
-                <li class="col-xs-12 col-md-6">
-                    <input class="nav-menu-item nav-search" name="search">
-                </li>
 				<li class="col-xs-12 hidden-md hidden-lg"><a class="hidden-md profile-menu-item" href="views/_perfil<?php echo ($user->tipo == 'asociado' ? "Asociado" : "Cliente"); ?>.php">Perfil</a></li>
                 <li class="col-xs-12 hidden-md hidden-lg"><form action="logout" method="post">
                                 <input type="hidden" name="_csrf" value="5yMriX0FMED3BXOrHPTt5fs8e2nkPNAHd7FxaZw_TkzXRkL4JE9kCLxyMuokgaCkslgiW6ptt2Qv6UcqxVgtPw=="><a href="logout" onclick="logout(event)" class="btn btn-link logout">Salir</a></form></li>
