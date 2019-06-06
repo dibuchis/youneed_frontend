@@ -88,7 +88,7 @@ function aceptarPedido($id){
     if($id){
 
         $data = array (
-            'uid' => $id
+            'pid' => $id
         );
         
         $params = '';
@@ -132,7 +132,7 @@ function cancelarPedido($id){
     if($id){
 
         $data = array (
-            'uid' => $id
+            'pid' => $id
         );
         
         $params = '';
