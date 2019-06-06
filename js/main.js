@@ -240,6 +240,7 @@ function contratarAsociado(event){
 
 function aceptarPedido(id){
     
+        jQuery("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
 
         jQuery.ajax({
             method:"POST",
@@ -249,9 +250,6 @@ function aceptarPedido(id){
                 fn:'aceptarPedido',
                 id: id
             },
-            afterSend:function(){
-                jQuery("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
-            },
             success:function(data){
                 
                 if(data.status == 1){
@@ -260,11 +258,9 @@ function aceptarPedido(id){
                         text:"Has aceptado la solicitud."
                     });
                     jQuery("#pedido-" + id + ' .notif_acciones').html('<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' + id + ')">EJECUTAR</a><a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' + id + ')">CANCELAR</a>');
+                    jQuery("#pedido-" + id).LoadingOverlay("hide");
                 }
                 //console.log(data.responseText);
-            },            
-            beforeSend:function(){
-                jQuery("#pedido-" + id).LoadingOverlay("hide");
             },
             error:function(){
                 jQuery("#pedido-" + id).LoadingOverlay("hide");
@@ -274,6 +270,8 @@ function aceptarPedido(id){
 
 function cancelarPedido(id){
     
+    jQuery("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
+
     jQuery.ajax({
         method:"POST",
         // url: 'https://app.youneed.com.ec/api/contratarasociado',
@@ -282,22 +280,17 @@ function cancelarPedido(id){
             fn:'cancelarPedido',
             id: id
         },
-        afterSend:function(){
-            jQuery("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
-        },
         success:function(data){
             
             if(data.status == 1){
                 Swal.fire({
-                    type:"success",
-                    text:"La solicitud ha sido cancelada."
+                    type:"info",
+                    text:"Solicitud cancelada."
                 });
                 jQuery("#pedido-" + id + ' .notif_acciones').html('<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' + id + ')">EJECUTAR</a><a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' + id + ')">CANCELAR</a>');
+                jQuery("#pedido-" + id).LoadingOverlay("hide");
             }
             //console.log(data.responseText);
-        },            
-        beforeSend:function(){
-            jQuery("#pedido-" + id).LoadingOverlay("hide");
         },
         error:function(){
             jQuery("#pedido-" + id).LoadingOverlay("hide");
