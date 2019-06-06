@@ -8,9 +8,6 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
-    <meta name="csrf-param" content="_csrf">
-    <meta name="csrf-token" content="5yMriX0FMED3BXOrHPTt5fs8e2nkPNAHd7FxaZw_TkzXRkL4JE9kCLxyMuokgaCkslgiW6ptt2Qv6UcqxVgtPw==">
     <title></title>
 
 <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">

@@ -81,8 +81,8 @@ if(isset($_GET) || isset($_POST) ){
     * return User
     *
     */
-    if($fn == 'confirmarPedido'){
-        $api->confirmarPedido();
+    if($fn == 'aceptarPedido'){
+        $api->aceptarPedido($_POST['id']);
     }
 
 
@@ -94,7 +94,7 @@ if(isset($_GET) || isset($_POST) ){
     *
     */
     if($fn == 'cancelarPedido'){
-        $api->cancelarPedido();
+        $api->cancelarPedido($_POST['id']);
     }
 
 }
