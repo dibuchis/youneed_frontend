@@ -12,9 +12,9 @@
 				<li class="col-xs-12 hidden-md hidden-lg"><a class="hidden-md profile-menu-item" href="views/_perfil<?php echo ($user->tipo == 'asociado' ? "Asociado" : "Cliente"); ?>.php">Perfil</a></li>
                 <li class="col-xs-12 hidden-md hidden-lg"><form action="logout" method="post">
                                 <input type="hidden" name="_csrf" value="5yMriX0FMED3BXOrHPTt5fs8e2nkPNAHd7FxaZw_TkzXRkL4JE9kCLxyMuokgaCkslgiW6ptt2Qv6UcqxVgtPw=="><a href="logout" onclick="logout(event)" class="btn btn-link logout">Salir</a></form></li>
-                <li class="hidden-xs col-md-1"><span class="nav-menu-item"><i class="material-icons">email</i> </span></li>
-                <li class="hidden-xs col-md-1"><span class="nav-menu-item hidden-xs"><i class="material-icons">notifications</i> </span></li>
-                <li class="dropdown usuario-panel hidden-xs col-md-3">
+                <li class="hidden-xs col-md-2"><span class="nav-menu-item"><i class="material-icons">email</i> </span></li>
+                <li class="hidden-xs col-md-2"><span class="nav-menu-item hidden-xs"><i class="material-icons">notifications</i> </span></li>
+                <li class="dropdown usuario-panel hidden-xs col-md-5">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img class="usuario-icono" src="https://app.youneed.com.ec/images/usuario-icono.png" alt=""> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li class="dropdown-header">Bienvenido
