@@ -251,7 +251,8 @@ function aceptarPedido(id){
                 id: id
             },
             success:function(data){
-                
+                console.log(data);
+
                 if(data.status == 1){
                     Swal.fire({
                         type:"success",
@@ -281,6 +282,7 @@ function cancelarPedido(id){
             id: id
         },
         success:function(data){
+                console.log(data);
             
             if(data.status == 1){
                 Swal.fire({
