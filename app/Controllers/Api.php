@@ -115,11 +115,10 @@ function aceptarPedido($id){
         
         curl_close($ch);
         
-        return json_decode($response);
+        echo $response;
         exit();
-        
     }else{
-        return json_encode($response);
+        echo $response;
         exit();
     }
 }
@@ -159,11 +158,11 @@ function cancelarPedido($id){
         
         curl_close($ch);
         
-        return json_decode($response);
+        echo $response;
         exit();
 
     }else{
-        return json_decode($response);
+        echo $response;
         exit();
     }
 }

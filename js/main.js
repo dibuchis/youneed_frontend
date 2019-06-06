@@ -251,9 +251,9 @@ function aceptarPedido(id){
                 id: id
             },
             success:function(data){
-                console.log(data);
+                var res = JSON.parse(data);
 
-                if(data.status == 1){
+                if(res.status == 1){
                     Swal.fire({
                         type:"success",
                         text:"Has aceptado la solicitud."
@@ -282,9 +282,9 @@ function cancelarPedido(id){
             id: id
         },
         success:function(data){
-                console.log(data);
-            
-            if(data.status == 1){
+            var res = JSON.parse(data);
+
+            if(res.status == 4){
                 Swal.fire({
                     type:"info",
                     text:"Solicitud cancelada."
