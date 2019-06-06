@@ -290,7 +290,7 @@ function cancelarPedido(id){
             if(data.status == 1){
                 Swal.fire({
                     type:"success",
-                    text:"Has aceptado la solicitud."
+                    text:"La solicitud ha sido cancelada."
                 });
                 jQuery("#pedido-" + id + ' .notif_acciones').html('<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' + id + ')">EJECUTAR</a><a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' + id + ')">CANCELAR</a>');
             }
