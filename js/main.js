@@ -240,8 +240,9 @@ function contratarAsociado(event){
 
 function aceptarPedido(id){
     
-    (function($){
-        $.ajax({
+        jQuery("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
+
+        jQuery.ajax({
             method:"POST",
             // url: 'https://app.youneed.com.ec/api/contratarasociado',
             url: app_BaseUrl + 'app/Ajax.php',
@@ -249,55 +250,52 @@ function aceptarPedido(id){
                 fn:'aceptarPedido',
                 id: id
             },
-            beforeSend:function(){
-                $("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
-            },
             success:function(data){
                 
-                // if(data){
+                if(data.status == 1){
                     Swal.fire({
                         type:"success",
                         text:"Has aceptado la solicitud."
                     });
-                // }
+                    jQuery("#pedido-" + id + ' .notif_acciones').html('<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' + id + ')">EJECUTAR</a><a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' + id + ')">CANCELAR</a>');
+                    jQuery("#pedido-" + id).LoadingOverlay("hide");
+                }
                 //console.log(data.responseText);
             },
-            afterSend:function(){
-                $("#pedido-" + id).LoadingOverlay("hide");
-            },
+            error:function(){
+                jQuery("#pedido-" + id).LoadingOverlay("hide");
+            }
         });
-    })(jQuery);
 }
 
 function cancelarPedido(id){
     
-    (function($){
-        $.ajax({
-            method:"POST",
-            // url: 'https://app.youneed.com.ec/api/contratarasociado',
-            url: app_BaseUrl + 'app/Ajax.php',
-            data:{
-                fn:'cancelarPedido',
-                id: id
-            },
-            beforeSend:function(){
-                $("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
-            },
-            success:function(data){
-                
-                // if(data){
-                    Swal.fire({
-                        type:"success",
-                        text:"Has cancelado la solicitud."
-                    });
-                // }
-                //console.log(data.responseText);
-            },
-            afterSend:function(){
-                $("#pedido-" + pid).LoadingOverlay("hide");
-            },
-        });
-    })(jQuery);
+    jQuery("#pedido-" + id).LoadingOverlay("show", {maxSize: 30 });
+
+    jQuery.ajax({
+        method:"POST",
+        // url: 'https://app.youneed.com.ec/api/contratarasociado',
+        url: app_BaseUrl + 'app/Ajax.php',
+        data:{
+            fn:'cancelarPedido',
+            id: id
+        },
+        success:function(data){
+            
+            if(data.status == 1){
+                Swal.fire({
+                    type:"success",
+                    text:"Has aceptado la solicitud."
+                });
+                jQuery("#pedido-" + id + ' .notif_acciones').html('<a href="javascript:void(0)" class="btn btn-warning btn-xs" onclick="ejecutarPedido(' + id + ')">EJECUTAR</a><a href="javascript:void(0)" class="btn btn-danger btn-xs" onclick="cancelarPedido(' + id + ')">CANCELAR</a>');
+                jQuery("#pedido-" + id).LoadingOverlay("hide");
+            }
+            //console.log(data.responseText);
+        },
+        error:function(){
+            jQuery("#pedido-" + id).LoadingOverlay("hide");
+        }
+    });
 }
 
 function clientSave(){
