@@ -193,20 +193,12 @@ function userMenu(obj){
 
 function contratarAsociado(event){
 	event.preventDefault();
-	jQuery("#panel-asociado").LoadingOverlay("show", {maxSize: 70 });
+    jQuery("#panel-asociado").LoadingOverlay("show", {maxSize: 70 });
 	jQuery.ajax({
         method:"POST",
         // url: 'https://app.youneed.com.ec/api/contratarasociado',
         url: app_BaseUrl + 'app/Ajax.php',
-        data:{
-            fn:'ContratarAsociado',
-            asociado_id: jQuery("#asociado_id").val(),
-            cliente_id: jQuery("#cliente_id").val(),
-            servicio_id: jQuery("#servicio_id").val(),
-            total: jQuery("#valor_total").val(),
-            fecha_para_servicio: jQuery("#fecha_servicio").val(),
-            forma_pago: jQuery("#metodo_de_pago").val()
-        },
+        data: jQuery('#contratar-asociado').serializeArray(),
         complete:function(data){
 			var res = JSON.parse(data.responseText);
             jQuery("#panel-asociado").LoadingOverlay("hide");
