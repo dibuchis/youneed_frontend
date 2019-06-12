@@ -193,7 +193,7 @@ function userMenu(obj){
 
 function contratarAsociado(event){
 	event.preventDefault();
-    jQuery("#panel-asociado").LoadingOverlay("show", {maxSize: 70 });
+    jQuery("#panel-chockout").LoadingOverlay("show", {maxSize: 70 });
 	jQuery.ajax({
         method:"POST",
         // url: 'https://app.youneed.com.ec/api/contratarasociado',
@@ -201,7 +201,7 @@ function contratarAsociado(event){
         data: jQuery('#contratar-asociado').serializeArray(),
         complete:function(data){
 			var res = JSON.parse(data.responseText);
-            jQuery("#panel-asociado").LoadingOverlay("hide");
+            jQuery("#panel-chockout").LoadingOverlay("hide");
 			if(res.status == 1){
 				// Swal.fire({
 				// type: 'success',
@@ -217,7 +217,7 @@ function contratarAsociado(event){
                 });
 				
 			}else if(res.status == 2){
-			jQuery("#dashboard-content").LoadingOverlay("hide");
+			jQuery("#panel-chockout").LoadingOverlay("hide");
             Swal.fire({
 				type: 'warning',
 				title: "Solicitud Pendiente.",
